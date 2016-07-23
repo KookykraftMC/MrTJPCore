@@ -49,7 +49,7 @@ dependencies {
 }
 
 def build_number = project.hasProperty("manualbuildnum") ? project.manualbuildnum : (System.getenv("BUILD_NUMBER") ?: "1")
-version = "${project.config.mod.version}."+build_number
+version = "${project.config.mod.version}"
 println "Starting build for $archivesBaseName $version for MC $config.mc.version-$config.forge.version"
 
 minecraft {

@@ -3,7 +3,7 @@
   "modid": "MrTJPCoreMod",
   "name": "MrTJPCore",
   "description":"Core libs and utilities",
-  "version": "@VERSION@.@BUILD_NUMBER@",
+  "version": "@VERSION@",
   "mcversion": "@MC_VERSION@",
   "url": "...",
   "authors": [ "MrTJP" ],
