@@ -76,11 +76,13 @@ object BlockUpdateHandler
         while (cIt.hasNext)
         {
             val chunkPos = cIt.next()
-            val chunk = world.getChunkFromChunkCoords(chunkPos.chunkXPos, chunkPos.chunkZPos)
+
             //KookyKraftMC - Check For Nulls
-            if (chunk == null) return
+            if (world.getChunkFromChunkCoords(chunkPos.chunkXPos, chunkPos.chunkZPos) == null) return
+            val chunk = world.getChunkFromChunkCoords(chunkPos.chunkXPos, chunkPos.chunkZPos)
+
+            if ( chunk.getBlockStorageArray == null) return
             val ebstorage = chunk.getBlockStorageArray
-            if (ebstorage == null) return
 
             var k = 0
             while (k < ebstorage.length)
